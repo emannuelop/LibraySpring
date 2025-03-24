@@ -1,0 +1,101 @@
+@startuml
+class Biblioteca {
+    - nome: string
+    - localizacao: string
+    - catalogo: Catalogo
+    - clientes: Cliente[]
+    - emprestimos: Emprestimo[]
+    - administrador: Administrador
+    + adicionarLivro(titulo: string, autor: string, isbn: string): Livro
+    + removerLivro(livro: Livro): void
+    + listarLivros(): Livro[]
+    + buscarLivroPorTitulo(titulo: string): Livro[]
+    + adicionarCliente(nome: string): Cliente
+    + removerCliente(cliente: Cliente): void
+    + listarClientes(): Cliente[]
+    + buscarClientePorNome(nome: string): Cliente[]
+    + emprestarLivro(livro: Livro, cliente: Cliente): void
+    + devolverLivro(livro: Livro): void
+}
+
+class Catalogo {
+    - livros: Livro[]
+    + adicionarLivro(livro: Livro): void
+    + removerLivro(livro: Livro): void
+    + listarLivros(): Livro[]
+    + buscarLivroPorTitulo(titulo: string): Livro[]
+}
+
+class Livro {
+    - titulo: string
+    - autor: Autor
+    - isbn: string
+    - disponivel: boolean
+}
+
+class Autor {
+    - nome: string
+    - nacionalidade: string
+}
+
+class Cliente {
+    - id: int
+    - nome: string
+    - livrosEmprestados: Livro[]
+    + pegarEmprestado(livro: Livro): void
+    + devolverLivro(livro: Livro): void
+}
+
+class Administrador {
+    - nome: string
+    - cargo: string
+    + adicionarLivro(titulo: string, autor: string, isbn: string): Livro
+    + removerLivro(livro: Livro): void
+    + listarLivros(): Livro[]
+    + buscarLivroPorTitulo(titulo: string): Livro[]
+    + adicionarCliente(nome: string): Cliente
+    + removerCliente(cliente: Cliente): void
+    + listarClientes(): Cliente[]
+    + buscarClientePorNome(nome: string): Cliente[]
+    + emprestarLivro(livro: Livro, cliente: Cliente): void
+    + devolverLivro(livro: Livro): void
+}
+
+class Emprestimo {
+    - livro: Livro
+    - cliente: Cliente
+    - dataEmprestimo: Data
+    - dataDevolucao: Data
+}
+
+class Funcionario {
+    - nome: string
+    - cargo: string
+    + realizarCadastroLivro(titulo: string, autor: string, isbn: string): Livro
+    + realizarEmprestimo(livro: Livro, cliente: Cliente): void
+    + realizarDevolucao(livro: Livro): void
+    + adicionarCliente(nome: string): Cliente
+    + removerCliente(cliente: Cliente): void
+    + listarClientes(): Cliente[]
+    + buscarClientePorNome(nome: string): Cliente[]
+}
+
+class Multa {
+    - valor: float
+    - motivo: string
+    - cliente: Cliente
+    + aplicarMulta(cliente: Cliente, valor: float, motivo: string): void
+    + removerMulta(cliente: Cliente): void
+}
+
+Biblioteca "1" -- "1" Catalogo
+Biblioteca "0..*" -- "0..*" Cliente
+Biblioteca "1" -- "1" Administrador
+Biblioteca "0..*" -- "0..*" Emprestimo
+Catalogo "0..*" -- "0..*" Livro
+Cliente "0..*" -- "0..*" Livro
+Emprestimo "1" -- "1" Livro
+Emprestimo "1" -- "1" Cliente
+Funcionario "1" -- "0..*" Cliente
+Multa "0..*" -- "1" Cliente
+@enduml
