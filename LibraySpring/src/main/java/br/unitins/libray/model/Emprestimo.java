@@ -1,4 +1,4 @@
-package br.unitins.libray;
+package br.unitins.libray.model;
 
 public class Emprestimo {
     
