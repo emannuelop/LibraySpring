@@ -1,15 +1,16 @@
 # LibraySpring
 
 ## Resumo do projeto
-Este projeto foi concebido como parte integrante do curso de Tópicos Especiais em Programação Optativa I, ministrado na Universidade Estadual do Tocantins - UNITINS. O seu propósito central consistiu na criação de um sistema de gestão bibliotecária denominado LibraySpring.
+Este projeto foi concebido como parte integrante do curso de Tópicos Especiais em Programação Optativa I, ministrado na Universidade Estadual do Tocantins - UNITINS. O seu propósito central consiste na criação de um sistema de gestão bibliotecária denominado LibraySpring.
 
-O sistema está sendo desenvolvido em java com o framework SpringBot seguindo os princípios da orientação a objetos. O banco de dados utilizado será o PosPostgreSQL.
+O sistema está sendo desenvolvido em java com o framework Spring Boot seguindo os princípios da orientação a objetos. O banco de dados utilizado será o PostgreSQL.
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
-- ``Java``
+- ``Java 21``
 - ``Visual Studio Code``
-- ``SpringBot``
+- ``Spring Boot``
+- ``Microsserviço Docker``
 - ``Programação Orientada a Objetos``
 
 ## 👨‍💻 Autores
