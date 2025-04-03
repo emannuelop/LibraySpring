@@ -11,11 +11,35 @@ public class Autor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Long idAutor;
+    private Long idAutor;
 
     @NotBlank(message = "O nome é obrigatório.")
-    String nome;
+    private String nome;
 
     @NotBlank(message = "A nacionalidade é obrigatória.")
-    String nacionalidade;
+    private String nacionalidade;
+
+    public Long getIdAutor() {
+        return idAutor;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getNacionalidade() {
+        return nacionalidade;
+    }
+
+    public void setIdAutor(Long idAutor) {
+        this.idAutor = idAutor;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setNacionalidade(String nacionalidade) {
+        this.nacionalidade = nacionalidade;
+    }
 }

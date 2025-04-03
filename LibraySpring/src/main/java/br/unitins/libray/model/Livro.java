@@ -26,4 +26,43 @@ public class Livro {
 
     Boolean disponivel;
 
+    public Long getIdLivro() {
+        return idLivro;
+    }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public Boolean getDisponivel() {
+        return disponivel;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
+
+    public void setDisponivel(Boolean disponivel) {
+        this.disponivel = disponivel;
+    }
+
+    public void setIdLivro(Long idLivro) {
+        this.idLivro = idLivro;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
 }

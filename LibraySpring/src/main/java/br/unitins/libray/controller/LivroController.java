@@ -3,6 +3,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import br.unitins.libray.model.Livro;
+import br.unitins.libray.model.Livro;
 import br.unitins.libray.service.LivroService;
 
 import java.util.List;
@@ -22,6 +23,16 @@ public class LivroController {
     @GetMapping
     public List<Livro> listarLivros() {
         return livroService.BuscarTodosLivros(); 
+    }
+
+    @PutMapping("/{id}")
+    public Livro atualizarLivro(@PathVariable Long id, @RequestBody Livro livroAtualizado) {
+        return livroService.atualizarLivro(id, livroAtualizado);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletarLivro(@PathVariable Long id) {
+        livroService.deletarLivro(id);
     }
     
 }
