@@ -2,7 +2,7 @@ package br.unitins.libray.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import br.unitins.libray.model.Livro;
+import br.unitins.libray.dto.LivroDTO;
 import br.unitins.libray.model.Livro;
 import br.unitins.libray.service.LivroService;
 
@@ -16,7 +16,7 @@ public class LivroController {
     private LivroService livroService;
 
     @PostMapping
-    Livro criarLivro(@RequestBody Livro livro) {
+    Livro criarLivro(@RequestBody LivroDTO livro) {
         return livroService.salvarLivro(livro);
     }
 
@@ -25,8 +25,13 @@ public class LivroController {
         return livroService.BuscarTodosLivros(); 
     }
 
+    @GetMapping("/{id}")
+    public Livro buscarLivro(@PathVariable Long id) {
+        return livroService.buscarLivro(id); 
+    }
+
     @PutMapping("/{id}")
-    public Livro atualizarLivro(@PathVariable Long id, @RequestBody Livro livroAtualizado) {
+    public Livro atualizarLivro(@PathVariable Long id, @RequestBody LivroDTO livroAtualizado) {
         return livroService.atualizarLivro(id, livroAtualizado);
     }
 

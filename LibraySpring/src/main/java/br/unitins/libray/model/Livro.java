@@ -17,7 +17,6 @@ public class Livro {
     @NotBlank(message = "O titulo é obrigatório.")
     String titulo;
 
-    @NotBlank(message = "O autor do livro é obrigatório.")
     @ManyToOne
     Autor autor;
 

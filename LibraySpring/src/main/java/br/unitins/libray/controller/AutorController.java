@@ -2,6 +2,7 @@ package br.unitins.libray.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import br.unitins.libray.dto.AutorDTO;
 import br.unitins.libray.model.Autor;
 import br.unitins.libray.service.AutorService;
 
@@ -15,7 +16,7 @@ public class AutorController {
     private AutorService autorService;
 
     @PostMapping
-    Autor criarAutor(@RequestBody Autor autor) {
+    Autor criarAutor(@RequestBody AutorDTO autor) {
         return autorService.salvarAutor(autor);
     }
 
@@ -24,8 +25,13 @@ public class AutorController {
         return autorService.BuscarTodosAutores(); 
     }
 
+    @GetMapping("/{id}")
+    public Autor buscarAutor(@PathVariable Long id) {
+        return autorService.buscarAutor(id); 
+    }
+
     @PutMapping("/{id}")
-    public Autor atualizarAutor(@PathVariable Long id, @RequestBody Autor autorAtualizado) {
+    public Autor atualizarAutor(@PathVariable Long id, @RequestBody AutorDTO autorAtualizado) {
         return autorService.atualizarAutor(id, autorAtualizado);
     }
 
