@@ -31,7 +31,6 @@ Após o build, abra o navegador de sua preferência e acesse:
 
 http://localhost:8080
 
-
 Você verá a interface do Swagger, onde poderá interagir com os CRUDs do projeto.
 
 ## 👨‍💻 Autores
