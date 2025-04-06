@@ -27,7 +27,7 @@ Dentro da pasta `LibrarySpring`, execute o seguinte comando no terminal:
 
 docker-compose up --build
 
-Após o build, abra o navegador de sua preferência e acesse: arduino Copiar Editar
+Após o build, abra o navegador de sua preferência e acesse: 
 
 http://localhost:8080
 
