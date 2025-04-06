@@ -20,16 +20,33 @@ Para executar o projeto localmente, siga os passos abaixo:
 ### 📌 Pré-requisito
 Certifique-se de que o **Docker** esteja instalado em sua máquina.
 
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+### Clone este repositório
+
+```bash
+    git clone https://github.com/emannuelop/LibraySpring.git
+```
+
 ### 📁 Acessar o diretório do projeto
 Abra o terminal e navegue até a pasta onde o projeto foi clonado. Dentro dela, localize a pasta `LibrarySpring`, onde estão os arquivos do projeto e a pasta `src`.
 
+```bash
+    cd .\LibraySpring-main\LibraySpring\
+```
+
 Dentro da pasta `LibrarySpring`, execute o seguinte comando no terminal:
 
-docker-compose up --build
+```bash
+    docker-compose up --build
+```
 
 Após o build, abra o navegador de sua preferência e acesse: 
 
-http://localhost:8080
+```bash
+    http://localhost:8080
+```
 
 Você verá a interface do Swagger, onde poderá interagir com os CRUDs do projeto.
 
