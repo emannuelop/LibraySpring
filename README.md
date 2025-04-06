@@ -25,7 +25,6 @@ Abra o terminal e navegue até a pasta onde o projeto foi clonado. Dentro dela, 
 
 Dentro da pasta `LibrarySpring`, execute o seguinte comando no terminal:
 
-```bash
 docker-compose up --build
 
 Após o build, abra o navegador de sua preferência e acesse: arduino Copiar Editar
