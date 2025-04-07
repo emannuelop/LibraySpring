@@ -1,7 +1,7 @@
 # LibraySpring
 
 ## Resumo do projeto
-Este projeto foi concebido como parte integrante do curso de Tópicos Especiais em Programação Optativa I, ministrado na Universidade Estadual do Tocantins - UNITINS. O seu propósito central consiste na criação de um sistema de gestão bibliotecária denominado LibraySpring.
+Este projeto foi concebido como parte integrante da disciplina de Tópicos Especiais em Programação Optativa I, ministrado na Universidade Estadual do Tocantins - UNITINS. O seu propósito central consiste na criação de um sistema de gestão bibliotecária denominado LibraySpring.
 
 O sistema está sendo desenvolvido em java com o framework Spring Boot seguindo os princípios da orientação a objetos. O banco de dados utilizado será o PostgreSQL.
 
@@ -18,7 +18,7 @@ O sistema está sendo desenvolvido em java com o framework Spring Boot seguindo 
 Para executar o projeto localmente, siga os passos abaixo:
 
 ### 📌 Pré-requisito
-Certifique-se de que o **Docker** esteja instalado em sua máquina.
+Certifique-se de que o **Docker** esteja instalado e aberto em sua máquina.
 
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
