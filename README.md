@@ -49,7 +49,7 @@ Após o build, abra o navegador de sua preferência e acesse:
 ```
 Você verá a interface do Swagger, onde poderá interagir com os CRUDs do projeto.
 
-### Criando um Usario
+### Criando um Usuário
 
 Para criar um novo usuário, certifique-se de preencher corretamente os campos necessários. Um dos campos obrigatórios é o **`idCargo`**, que define o tipo de usuário. Utilize os seguintes valores:
 
